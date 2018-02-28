@@ -63,7 +63,7 @@ lsp(base, TRUE)
 lsp(base, pattern = "^is")
 
 # LastFM API test
-my_key <- "e9d17ad4fc90b74a488721ef21c13725"
+my_key <- "your lastfm API key"
 
 artInfo=artist.getInfo(artist = "Porter Robinson" )# Data points of favorite artists or genre
 simInfo=artist.getSimilar(artist = "Porter Robinson" )
