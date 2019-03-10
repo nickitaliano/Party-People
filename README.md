@@ -1,2 +1,2 @@
 # Rtists
-Package for interactive,exploratory musical database and recommendation apps.
+Package for interactive,explorative musical database and recommendation app.
