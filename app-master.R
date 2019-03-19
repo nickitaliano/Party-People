@@ -1,5 +1,3 @@
-#ToDo: Analyze main + secondary genre tags...
-
 rm(list = ls())
 
 ## genrify.R ##
@@ -100,10 +98,10 @@ output$plot_tm <- renderPlot({
     select(genre1 = genre1, color)
   
   #bar chart & tree map
-  res_nodes3 <- res_nodes2 %>% 
-    count(genre1, color) %>% 
-    ungroup() %>% 
-    arrange(desc(n)) %>% 
+    res_nodes3 <- res_nodes2 %>% 
+    group_by(genre1,color) %>% tally()%>%#count(genre1) 
+    ungroup()%>% 
+    arrange(desc(n))%>% 
     mutate(x = row_number()) %>% 
     rename(name = genre1,
            color = color,
